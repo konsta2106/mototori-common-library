@@ -1,5 +1,5 @@
 export interface IReviewMessageDetails {
-    gigId?: string;
+    partId?: string;
     reviewerId?: string;
     sellerId?: string;
     review?: string;
@@ -15,7 +15,7 @@ export interface IReviewMessageDetails {
   
   export interface IReviewDocument {
     _id?: string;
-    gigId: string;
+    partId: string;
     reviewerId: string;
     sellerId: string;
     review: string;

@@ -1,6 +1,6 @@
 import mongoose, { ObjectId } from 'mongoose';
 import { IOffer } from './order';
-import { ISellerGig } from './part';
+import { ISellerPart } from './part';
 import { ISellerDocument } from './seller';
 
 export interface IConversationDocument extends Document {
@@ -19,7 +19,7 @@ export interface IMessageDocument {
   fileType?: string;
   fileSize?: string;
   fileName?: string;
-  gigId?: string;
+  partId?: string;
   sellerId?: string;
   buyerId?: string;
   senderUsername?: string;
@@ -48,7 +48,7 @@ export interface IMessageDetails {
 export interface IChatBoxProps {
   seller: IChatSellerProps;
   buyer: IChatBuyerProps
-  gigId: string;
+  partId: string;
   onClose: () => void;
 }
 
@@ -68,5 +68,5 @@ export interface IChatBuyerProps {
 export interface IChatMessageProps {
   message: IMessageDocument;
   seller?: ISellerDocument;
-  gig?: ISellerGig;
+  part?: ISellerPart;
 }
